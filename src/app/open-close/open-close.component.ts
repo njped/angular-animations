@@ -1,5 +1,6 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { animate, state, style, transition, trigger, useAnimation } from '@angular/animations';
 import { Component } from '@angular/core';
+import { transAnimation } from '../animations';
 
 @Component({
   selector: 'app-open-close',
@@ -23,7 +24,21 @@ import { Component } from '@angular/core';
       transition('* => open', [
         animate('0.5s')
       ])
-    ])
+    ]),
+
+    // Using animation from animations.ts file
+    // trigger('openClose', [
+    //   transition('* => *', [
+    //     useAnimation(transAnimation, {
+    //       params: {
+    //         height: 0,
+    //         opacity: 1,
+    //         backgroundColor: 'red',
+    //         time: '1s'
+    //       }
+    //     })
+    //   ])
+    // ])
   ]
 })
 export class OpenCloseComponent {
