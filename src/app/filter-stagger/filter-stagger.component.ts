@@ -45,7 +45,6 @@ export class FilterStaggerComponent implements OnInit {
   public animatePage = true; // <-- decorator can't go by itself 
 
   characters: Array<Character> | undefined;;
-  numberOfChars = -1;
 
   constructor() { }
 
